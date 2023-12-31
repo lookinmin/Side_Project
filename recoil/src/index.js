@@ -4,12 +4,20 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RecoilRoot } from "recoil";
+import { BrowserRouter } from "react-router-dom";
+import { QueryClientProvider, QueryClient } from "react-query";
 
+const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
     <RecoilRoot>
-      <App />
+      <BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <App />
+        </QueryClientProvider>
+      </BrowserRouter>
     </RecoilRoot>
   </React.StrictMode>
 );
