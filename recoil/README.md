@@ -12,8 +12,10 @@ Recoil을 통한 간단한 Counter 예제
 
 ### Todo-list
 Recoil, mui, styled-components를 통한 TODO-LIST 예제
-- 다크모드 맞춤 Style 
+- 다크모드 맞춤 Style
+- mui style changed : styled-component 기반 & sx
+- DarkMode BG : #262626 / Txt : #f7f7f7
 
 #
 
-<img src="./img/todo-list.png" width="80%">
+<img src="./img/todo-list.png" width="90%">
