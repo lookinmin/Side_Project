@@ -16,4 +16,4 @@ Recoil, mui, styled-components를 통한 TODO-LIST 예제
 
 #
 
-<img src="./img/todo-list.png width="80%""/>
+<img src="./img/todo-list.png" width="80%">
