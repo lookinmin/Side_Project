@@ -5,7 +5,7 @@
 <hr />
 
 Recoil From META
-- React 상태관리 라이브러리 Redux, Recoil을 JS 기반으로 사용해보자
+- React 상태관리 라이브러리 Recoil을 JS 기반으로 사용해보자
 
 ### Counter
 Recoil을 통한 간단한 Counter 예제
