@@ -298,4 +298,4 @@ const StyledWrapper = styled.div`
 
 <hr />
 
-<img src="./img/todo-list.png" width="90%">
+<img src="./img/todo-list.png" width="100%">
