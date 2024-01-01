@@ -1,0 +1,12 @@
+input {
+  color: #f7f7f7 !important;
+}
+.css-953pxc-MuiInputBase-root-MuiInput-root {
+  color: #f7f7f7 !important;
+}
+
+li {
+  list-style-type: square;
+  font-size: 1em;
+  font-weight: 500;
+}

@@ -60,8 +60,9 @@ const NaviDiv = styled.div`
 `;
 
 const RouteDiv = styled.div`
-  margin: 3rem;
+  padding: 3rem;
   display: flex;
   flex-flow: column nowrap;
   gap: 30px;
+  background-color: #262626;
 `;

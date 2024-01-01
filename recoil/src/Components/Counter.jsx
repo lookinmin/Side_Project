@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { atom, useRecoilState, useRecoilValue } from "recoil";
-import { countState } from "../atom";
+import { countState } from "../atoms";
 
 const CountDiv = (/* { count, onUp } */) => {
   // atom - countState 읽어오기
