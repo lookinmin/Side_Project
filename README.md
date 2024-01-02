@@ -10,4 +10,8 @@
    - [ ] Bootstrap
    - [X] Material UI
 2. React TS Small Project <br/>
-3. Flutter Small Project <br/>
+3. Front-end Developer 소양 기르기
+   - [ ] AWS-S3 CloudFront
+   - [ ] Code Splitting
+   - [ ] Webpack
+   - [ ] Jest
