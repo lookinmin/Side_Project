@@ -2,7 +2,7 @@
 
 <hr/>
 
-1. React 라이브러리 예제
+1. React Libraries
    - [X] Recoil 
    - [ ] Redux, Redux-toolkit 
    - [ ] React-Query
@@ -17,3 +17,4 @@
    - [ ] Code Splitting
    - [ ] Webpack
    - [ ] Jest
+   - [ ] Ajv
