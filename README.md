@@ -3,16 +3,18 @@
 <hr/>
 
 1. React Libraries
-   - [X] Recoil 
-   - [ ] Redux, Redux-toolkit 
+   - [x] Recoil
+   - [x] Redux, Redux-toolkit
    - [ ] React-Query
-   - [X] Styled-components
+   - [x] Styled-components
    - [ ] Bootstrap
-   - [X] Material UI
+   - [x] Material UI
+   - [x] Axios
 2. React TS Small Project
-   - [X] Todo-List
+   - [x] Todo-List
+   - [x] Counter
    - [ ] Connected with MongoDB
-4. Front-end Developer 소양 기르기
+3. Front-end Developer 소양 기르기
    - [ ] AWS-S3 CloudFront
    - [ ] Code Splitting
    - [ ] Webpack
