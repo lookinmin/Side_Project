@@ -6,7 +6,6 @@ import {
   todoListState,
   todoListStatsState,
 } from "../atoms";
-import FormGroup from "@mui/material/FormGroup";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox, { checkboxClasses } from "@mui/material/Checkbox";
@@ -18,7 +17,6 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-import InputLabel from "@mui/material/InputLabel";
 
 let id = 1;
 const getId = () => {
