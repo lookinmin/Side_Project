@@ -5,7 +5,7 @@
 1. React Libraries
    - [x] Recoil
    - [x] Redux, Redux-toolkit
-   - [ ] React-Query
+   - [x] React-Query, @tanstack/react-query
    - [x] Styled-components
    - [ ] Bootstrap
    - [x] Material UI
@@ -16,7 +16,9 @@
    - [ ] Connected with MongoDB
 3. Front-end Developer 소양 기르기
    - [ ] AWS-S3 CloudFront
+   - [ ] Elastic Beanstalk
    - [ ] Code Splitting
    - [ ] Webpack
    - [ ] Jest
    - [ ] Ajv
+   - [ ] 토큰과 세션
