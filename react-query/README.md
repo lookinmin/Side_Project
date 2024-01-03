@@ -110,6 +110,11 @@ export const addTodo = async (todo: Pick<Todo, "title">): Promise<Todo> => {
 1. queryClient 생성 시, default options들에 대해 공부해 볼 필요성
 2. react-query의 queryKey에 데이터를 캐싱하고 queryFn의 함수를 호출한다.
 
+
+<hr />
+
+
+
 ### TODO-LIST with React-query - 2 with Axios
 
 #### ReactQueryDevtools 사용해 볼 것
