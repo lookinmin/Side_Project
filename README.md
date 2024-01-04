@@ -18,7 +18,6 @@
    - [ ] Connected with MongoDB
 3. Front-end Developer 소양 기르기
    - [ ] AWS-S3 CloudFront
-   - [ ] AWS Elastic Beanstalk
    - [ ] Code Splitting
    - [ ] Webpack
    - [ ] Jest
@@ -26,5 +25,7 @@
    - [ ] 토큰과 세션
    - [ ] Sass
    - [ ] Tailwind CSS
+4. Deploy
    - [ ] Vercel
-   
+   - [ ] AWS Elastic Beanstalk
+   - [ ] netlify
