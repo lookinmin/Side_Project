@@ -26,4 +26,5 @@
    - [ ] 토큰과 세션
    - [ ] Sass
    - [ ] Tailwind CSS
+   - [ ] Vercel
    
