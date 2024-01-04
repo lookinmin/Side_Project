@@ -10,15 +10,20 @@
    - [ ] Bootstrap
    - [x] Material UI
    - [x] Axios
+   - [ ] SWR
+   - [ ] Vite
 2. React TS Small Project
    - [x] Todo-List
    - [x] Counter
    - [ ] Connected with MongoDB
 3. Front-end Developer 소양 기르기
    - [ ] AWS-S3 CloudFront
-   - [ ] Elastic Beanstalk
+   - [ ] AWS Elastic Beanstalk
    - [ ] Code Splitting
    - [ ] Webpack
    - [ ] Jest
    - [ ] Ajv
    - [ ] 토큰과 세션
+   - [ ] Sass
+   - [ ] Tailwind CSS
+   
