@@ -26,6 +26,6 @@
    - [ ] Sass
    - [ ] Tailwind CSS
 4. Deploy
-   - [ ] Vercel
+   - [X] Vercel
    - [ ] AWS Elastic Beanstalk
    - [ ] netlify
