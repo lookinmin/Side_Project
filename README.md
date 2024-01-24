@@ -22,9 +22,13 @@
    - [ ] Webpack
    - [ ] Jest
    - [ ] Ajv
-   - [ ] 토큰과 세션
+   - [ ] Tokken
+   - [ ] Session
+   - [ ] Cookie
+   - [ ] JWT
    - [ ] Sass
    - [ ] Tailwind CSS
+   - [ ] Web Socket
 4. Deploy
    - [X] Vercel
    - [ ] AWS Elastic Beanstalk
