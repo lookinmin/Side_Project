@@ -12,11 +12,13 @@
    - [x] Axios
    - [ ] SWR
    - [ ] Vite
+   - [ ] React Spring
 2. React TS Small Project
    - [x] Todo-List
    - [x] Counter
    - [ ] Connected with MongoDB
    - [ ] PWA
+   - [ ] Restaurant
 3. Front-end Developer 소양 기르기
    - [ ] AWS-S3 CloudFront
    - [ ] Code Splitting
