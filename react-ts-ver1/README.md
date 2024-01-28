@@ -14,4 +14,4 @@
 - React TS 완성 프로젝트 배포
 
 ### 개발 기간
-Start Data : 2024.01.28
+Start Date : 2024.01.28
