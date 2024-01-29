@@ -18,7 +18,7 @@
    - [x] Counter
    - [ ] Connected with MongoDB
    - [ ] PWA
-   - [ ] Restaurant
+   - [ ] Harry Potter House Information
 3. Front-end Developer 소양 기르기
    - [ ] AWS-S3 CloudFront
    - [ ] Code Splitting
