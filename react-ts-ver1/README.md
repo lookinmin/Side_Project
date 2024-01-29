@@ -1,4 +1,4 @@
-## Restaurant 홈페이지 만들기
+## Harry Potter House Information
 
 ### 기술 스택
 - React TS
@@ -6,7 +6,8 @@
 - Axios
 - React-Query
 - React Spring
-- Vercel
+- AWS Elastic Beanstalk
+- @babel Webpack
 
 ### 의의
 - 실전 폴더 구조 및 로직 구성
