@@ -1,13 +1,30 @@
 import React from "react";
 import styled from "styled-components";
+import { FaInstagram, FaGithub } from "react-icons/fa6";
+import { SiVelog } from "react-icons/si";
 
 export const Footer: React.FC = () => {
   return (
     <StyledFooter>
       <div>
-        <a href="https://www.instagram.com/lookin_min/">@lookin_min</a>
-        <a href="https://velog.io/@lookin_min">@velog</a>
-        <a href="https://github.com/lookinmin">@GitHub</a>
+        <FaInstagram
+          onClick={() => window.open("https://www.instagram.com/lookin_min/")}
+          size={25}
+          style={{ cursor: "pointer" }}
+          title="@lookin_min 인스타그램"
+        />
+        <FaGithub
+          onClick={() => window.open("https://github.com/lookinmin")}
+          size={25}
+          style={{ cursor: "pointer" }}
+          title="@lookinmin GitHub"
+        />
+        <SiVelog
+          onClick={() => window.open("https://velog.io/@lookin_min")}
+          size={25}
+          style={{ cursor: "pointer" }}
+          title="@lookin_min.log"
+        />
       </div>
     </StyledFooter>
   );
@@ -25,7 +42,7 @@ const StyledFooter = styled.div`
   & > div {
     display: flex;
     flex-direction: row;
-    gap: 10vw;
+    gap: 7vw;
     padding: 2vh 0;
 
     & > a {

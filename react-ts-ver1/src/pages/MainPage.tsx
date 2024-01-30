@@ -1,34 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { getHouseName } from "../api/getData";
 import { useQuery } from "react-query";
 import styled from "styled-components";
 import { ImgHandler } from "../Components/ImgHandler";
+import { useNavigate } from "react-router-dom";
+import { GetNameAndId } from "../model/house";
 
 export const MainPage: React.FC = () => {
-  const [nameArray, setNameArray] = useState<string[]>([]);
-
-  const { data, isLoading, error } = useQuery<string[]>(["house"], () =>
-    getHouseName()
-  );
-
-  useEffect(() => {
-    if (data) {
-      setNameArray(data);
-    }
-  }, [data]);
+  const navigate = useNavigate();
+  const {
+    data = [],
+    isLoading,
+    error,
+  } = useQuery<GetNameAndId[]>(["house"], () => getHouseName());
 
   if (isLoading) return <div>now in Loading...</div>;
   if (error) return <div>ERROR OCCURED</div>;
+
+  console.log(data);
 
   return (
     <StyledDiv>
       <h2>Choose Your House</h2>
       <HouseGrid>
-        {nameArray.map((name) => {
+        {data.map((item) => {
           return (
-            <div key={name}>
-              <ImgHandler name={name} height="130px" />
-              <p>{name}</p>
+            <div key={item.id} onClick={() => navigate(`/house/${item.id}`)}>
+              <ImgHandler name={item.name} height="130px" />
+              <p>{item.name}</p>
             </div>
           );
         })}
@@ -69,7 +68,7 @@ const HouseGrid = styled.div`
     justify-content: center;
     align-items: center;
     gap: 3vh;
-    cursor: pointer;
+    cursor: url("/cursor.cur") 20 30, auto;
     padding: 3vh 0;
 
     & > p {

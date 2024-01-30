@@ -1,4 +1,4 @@
-export interface House {
+export interface HouseData {
   animal: string;
   commonRoom: string;
   element: string;
@@ -21,3 +21,5 @@ export type Trait = {
   id: string;
   name: string;
 };
+
+export type GetNameAndId = Pick<HouseData, "id" | "name">;
