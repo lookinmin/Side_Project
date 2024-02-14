@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
         <img
           alt="호그와트"
           height="33px"
-          src="https://i.namu.wiki/i/qMLLC4S0FjxRioypSBSr4n_0oRu6C6_JR0p22tfSIsIN4J51R7uY8rmTOdMzSbbVXuZcGGKFkDcoslIMnBxfzFej5uZqij0svfAf2PqJAke1N-bqjA4hxlh5nICqiNNxWLldfGUfNdHAliaUy4ayXQ.webp"
+          src="https://i.namu.wiki/i/kDjsE73ej4xKN-qHjqBMi479insFtgVkUAy74WUwWgFgE2EvvOUwTu827A2x1bWur_ExPGT4SJ8l2vXEhRba3WGOQlNIpUrMFDstxQEy-PIKM7NnHwnSlWqNUvb4f1BWx7dudUcpliMZxYSlEx2bcw.webp"
         />
         Hogwarts
       </menu>

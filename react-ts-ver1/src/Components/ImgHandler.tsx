@@ -11,7 +11,7 @@ export const ImgHandler: React.FC<ImgProps> = ({ name, height }) => {
     return (
       <img
         alt="그리핀도르"
-        src="https://i.namu.wiki/i/iztIztG2wYZlyAkgXfwjscBOs1EroRJsO91khg67jQqP_VRAeHKHHRGTSWViH-lUqaG2ldcX6QtIVIQ6RORioh1OJgzuOzPepx0dy1dviwMGjiTNPna8-q4C-BmlgUNJpWoKl3486-AYhv3qWPiF3w.webp"
+        src="https://i.namu.wiki/i/9C5RKtdBghq84Kc_30h-vDnJQwE5FmbRI4mtbvNrxhhA2NXy8H91G1FLdBCkq3PBkMOsXaQLsUg09nuS53bXuZy2Ck2mv1DBekob1Agt9fSzEgiwY00zdxmsNLb3U68CcRgELgvKxIw7SPiOM6XAEg.webp"
         height={h}
       />
     );
@@ -19,7 +19,7 @@ export const ImgHandler: React.FC<ImgProps> = ({ name, height }) => {
     return (
       <img
         alt="레번클로"
-        src="https://i.namu.wiki/i/wQTykYMBl4qeUZywSJBOoj8nrU3HzatBx4twA8oHlI9DgGlqaL9xdyxxisI1290hBzJf86kKuyB33JQ8jsstQxfOvDQd7HlPS9o1ryE1K9sK_o2q8w6xc5OJKIbln87cWv826o4BTwwpA2R4ik4kVw.webp"
+        src="https://i.namu.wiki/i/txSSDeGuih2UR2IWkvi_mfgUadTYwlUAW8PN_ieNTaQ-MK-1dRja4El-DIfSweTyxi47UjAFZID_E7a_h5f7K6VriiyjUp2U6KcQ6OA-R4PwmCf6jMPOWl6MRyIFj7lXkEn_HCLBVabx2XspQfvFtQ.webp"
         height={h}
       />
     );
@@ -27,7 +27,7 @@ export const ImgHandler: React.FC<ImgProps> = ({ name, height }) => {
     return (
       <img
         alt="후플푸프"
-        src="https://i.namu.wiki/i/3RiJGBsTRCI3tQXerdHX3eDLz-LuLU6erkZhOOFpLQohZUooWtB_erxt1ExWWzrL0OFCjHP0Fi39DgjQGv7n0Behcd1FEZM6RLU9El2HCSloS4Px65UdRNubKRX5WycEmvAGLkFTkLq9lkZTlQsrTw.webp"
+        src="https://i.namu.wiki/i/ZElCb8UYAPDjLIv4HXfsyiKnLROjkumL5S3vIBl4VdBnzrtdsULOsXAmpr40qJw0wdUGJ7ytw8lHCZz2VLm7boGKdt9t6ZOearfJVKSi9sw4gLSKLuHfLGTeMN99eAAR1ZPsfyVR8KEAsLSJ1aPnTA.webp"
         height={h}
       />
     );
@@ -35,7 +35,7 @@ export const ImgHandler: React.FC<ImgProps> = ({ name, height }) => {
     return (
       <img
         alt="슬리데린"
-        src="https://i.namu.wiki/i/hrRLZXNoIEvFKKg2atUviDldnPnROWU34cjAYf63oLR_s3Re4xwvr_oawXtFTOwvPjnCoXdmzh1p0wOyqd3fqaYOUvRuil12k8DJPG9AnPsdqEF6MPG-7cbgIK9s2gglZgQC-H5BEJlF2ZDou4mKQg.webp"
+        src="https://i.namu.wiki/i/yvIgxVUa2zeGNTw5ysK23HgyvHbkHxacuE6tWCL-9CigFZo82bkHPN9v-IZanv7V1UA4t86AUvZJBwnglSODaXw4ZKofCADCMquVVlGpS0MwzkjXqyyS0_Bgr5pD7BabIQn14syU9CpmrQ2k4FoUNw.webp"
         height={h}
       />
     );
