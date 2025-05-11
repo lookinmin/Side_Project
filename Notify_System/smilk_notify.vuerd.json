@@ -4,8 +4,8 @@
   "settings": {
     "width": 3000,
     "height": 3000,
-    "scrollTop": -870.4431,
-    "scrollLeft": -979.6307,
+    "scrollTop": -970.4431,
+    "scrollLeft": -1298.1961,
     "zoomLevel": 1,
     "show": 431,
     "database": 8,
@@ -1836,16 +1836,16 @@
         "comment": "SEQ",
         "dataType": "NUMBER",
         "default": "",
-        "options": 8,
+        "options": 10,
         "ui": {
-          "keys": 2,
+          "keys": 3,
           "widthName": 60,
           "widthComment": 60,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1746971470469,
+          "updateAt": 1746972231238,
           "createAt": 1746971470469
         }
       },
@@ -2069,7 +2069,7 @@
       },
       "4RJCAetlbZB_SF59AiIJM": {
         "id": "4RJCAetlbZB_SF59AiIJM",
-        "identification": false,
+        "identification": true,
         "relationshipType": 4,
         "startRelationshipType": 2,
         "start": {
