@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모델 컨텍스트 프로토콜(MCP) 산업 동향 및 시장 연구 인포그래픽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 
+        Infographic Plan Summary:
+        1. Introduction: What is MCP? (Core concept, "USB-C for AI" analogy)
+        2. Market Overview/Tech Analysis: MCP Architecture (Host, Client, Server), Core Primitives.
+        3. Key Trends/Benefits: Core benefits of adopting MCP.
+        4. Use Cases/Competitive Landscape: Claude Desktop vs. CursorAI comparison.
+        5. Tech Deep Dive/Process: MCP Control Mechanisms (Multi-layered approach).
+        6. Future Outlook: Evolution of MCP and AI Agent Integration.
+        7. Conclusion: Summary of MCP's current state and utility.
+
+        Selected Color Palette: "Energetic & Playful"
+        - Primary Action: #FF6B6B (Red-Pink)
+        - Secondary Accent: #FFD166 (Yellow)
+        - Positive/Growth: #06D6A0 (Green)
+        - Informational/Neutral: #118AB2 (Blue)
+        - Dark Text/Background Element: #073B4C (Dark Blue)
+        - Light Background: #F8F9FA
+        - Card Background: #FFFFFF
+
+        Visualization Choices Summary (Confirming NO SVG, NO MERMAID JS):
+        - MCP Definition: Large text, Unicode icons + text. (HTML/CSS)
+        - MCP Architecture: Diagram with boxes and arrows. (HTML/CSS with Tailwind)
+        - Core Benefits: Icon list or simple bar chart (Chart.js). (Chosen: Icon list with HTML/CSS)
+        - Claude Desktop vs. CursorAI: Comparative table, feature icons. (HTML/CSS with Tailwind)
+        - MCP Control Mechanisms: Layered diagram. (HTML/CSS with Tailwind)
+        - Future Outlook: Timeline or icon list. (Chosen: Icon list with HTML/CSS)
+        - MCP Adoption Growth (Illustrative): Line Chart (Chart.js).
+        - MCP Feature Adoption (Illustrative): Donut Chart (Chart.js).
+
+        Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in the output.
+    -->
+    <style>
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: #f8f9fa; /* Light Background */
+      }
+      .gradient-text {
+        background: linear-gradient(to right, #ff6b6b, #118ab2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px; /* Default max-width, can be overridden by Tailwind */
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        max-height: 400px;
+      }
+      @media (min-width: 768px) {
+        .chart-container {
+          height: 350px;
+        }
+      }
+      .card {
+        background-color: #ffffff; /* Card Background */
+        border-radius: 0.5rem; /* rounded-lg */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+        padding: 1.5rem; /* p-6 */
+        margin-bottom: 1.5rem; /* mb-6 */
+      }
+      .section-title {
+        font-size: 2.25rem; /* text-3xl equivalent */
+        font-weight: 700; /* font-bold */
+        color: #073b4c; /* Dark Text */
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      .section-subtitle {
+        font-size: 1.125rem; /* text-lg */
+        color: #118ab2; /* Informational Blue */
+        text-align: center;
+        margin-bottom: 2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #ff6b6b; /* Primary Action */
+      }
+      .benefit-icon {
+        font-size: 2rem;
+        color: #06d6a0; /* Positive Green */
+        margin-right: 0.5rem;
+      }
+      .comparison-table th,
+      .comparison-table td {
+        border: 1px solid #e5e7eb; /* Tailwind gray-200 */
+        padding: 0.75rem;
+        text-align: left;
+      }
+      .comparison-table th {
+        background-color: #118ab2; /* Informational Blue */
+        color: white;
+      }
+      .flow-step {
+        background-color: #e0f2fe; /* Light blue bg for steps */
+        border-left: 4px solid #118ab2; /* Blue border */
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.25rem;
+      }
+      .flow-arrow {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #118ab2;
+        margin: 0.25rem 0;
+      }
+    </style>
+  </head>
+  <body class="text-[#073B4C]">
+    <header class="bg-[#073B4C] text-white py-12 px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        모델 컨텍스트 프로토콜(MCP)
+      </h1>
+      <p class="text-xl md:text-2xl text-[#FFD166]">
+        AI의 새로운 연결 표준: 산업 동향 및 시장 분석
+      </p>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+      <section id="introduction" class="my-12">
+        <h2 class="section-title">
+          MCP란 무엇인가?
+          <span class="gradient-text">AI의 미래를 연결하다</span>
+        </h2>
+        <p class="section-subtitle">
+          모델 컨텍스트 프로토콜(MCP)은 AI 어시스턴트가 다양한 데이터 소스 및
+          외부 시스템과 원활하게 상호작용하도록 지원하는 앤트로픽 개발의
+          오픈소스 표준입니다. AI가 가진 정보의 한계를 넘어, 실제 세계 데이터에
+          접근하여 더 정확하고 맥락에 맞는 응답을 생성하는 것을 목표로 합니다.
+        </p>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="card">
+            <h3 class="text-2xl font-bold text-[#118AB2] mb-3">
+              핵심 개념: "AI를 위한 USB-C 포트"
+            </h3>
+            <p class="text-lg">
+              MCP는 다양한 주변 장치를 표준화된 방식으로 컴퓨터에 연결하는 USB-C
+              포트처럼, AI 애플리케이션에게 도구, 데이터베이스, API 등에 대한
+              일관된 접근 방식을 제공합니다. 개발자는 개별 통합 코드 없이 단일
+              프로토콜로 다양한 시스템과 AI를 연동할 수 있습니다.
+            </p>
+            <div class="mt-4 flex items-center">
+              <span class="text-4xl mr-4">🔌</span>
+              <div>
+                <p class="font-semibold">단일 프로토콜</p>
+                <p class="font-semibold">확장성 증대</p>
+                <p class="font-semibold">개발 단순화</p>
+              </div>
+            </div>
+          </div>
+          <div class="card text-center">
+            <p class="text-xl text-[#073B4C] mb-2">
+              MCP 생태계 참여 기업 (예시)
+            </p>
+            <div class="text-6xl font-bold stat-number">100+</div>
+            <p class="text-lg text-[#118AB2] mt-2">
+              (가상 수치: 초기 채택 기업 및 개발자 커뮤니티)
+            </p>
+            <p class="mt-4 text-sm">
+              Block, Zed, Replit 등 다양한 기업과 개발 도구가 초기부터 MCP
+              생태계에 참여하며 그 잠재력을 보여주고 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="architecture" class="my-12">
+        <h2 class="section-title">
+          MCP 기술 심층 분석:
+          <span class="gradient-text">아키텍처와 작동 원리</span>
+        </h2>
+        <p class="section-subtitle">
+          MCP는 호스트, 클라이언트, 서버의 3가지 주요 구성 요소로 이루어진
+          클라이언트-호스트-서버 패턴을 채택하여 모듈성과 확장성을 높입니다.
+          또한, 도구, 리소스, 프롬프트라는 핵심 프리미티브를 통해 AI와 외부
+          시스템 간의 상호작용을 표준화합니다.
+        </p>
+        <div class="card md:col-span-2">
+          <h3 class="text-2xl font-bold text-[#118AB2] mb-4 text-center">
+            MCP 아키텍처 개요
+          </h3>
+          <div
+            class="flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <div
+              class="text-center p-4 border border-[#118AB2] rounded-lg w-full md:w-1/3"
+            >
+              <div class="text-4xl mb-2">🏠</div>
+              <h4 class="text-xl font-semibold text-[#073B4C]">
+                호스트 (Host)
+              </h4>
+              <p class="text-sm">
+                사용자와 직접 상호작용하는 AI 애플리케이션 (예: Claude Desktop,
+                CursorAI). MCP 클라이언트 관리 및 보안 정책 시행.
+              </p>
+            </div>
+            <div class="text-4xl text-[#118AB2] hidden md:block">➡️</div>
+            <div class="text-4xl text-[#118AB2] md:hidden text-center">⬇️</div>
+            <div
+              class="text-center p-4 border border-[#118AB2] rounded-lg w-full md:w-1/3"
+            >
+              <div class="text-4xl mb-2">🔗</div>
+              <h4 class="text-xl font-semibold text-[#073B4C]">
+                클라이언트 (Client)
+              </h4>
+              <p class="text-sm">
+                호스트 내 중개자. 호스트와 특정 MCP 서버 간의 상태 기반 연결
+                관리. 기능 협상 및 메시지 흐름 조정.
+              </p>
+            </div>
+            <div class="text-4xl text-[#118AB2] hidden md:block">➡️</div>
+            <div class="text-4xl text-[#118AB2] md:hidden text-center">⬇️</div>
+            <div
+              class="text-center p-4 border border-[#118AB2] rounded-lg w-full md:w-1/3"
+            >
+              <div class="text-4xl mb-2">⚙️</div>
+              <h4 class="text-xl font-semibold text-[#073B4C]">
+                서버 (Server)
+              </h4>
+              <p class="text-sm">
+                특정 기능을 노출하는 경량 서비스. 기존 데이터 소스, API 등을 MCP
+                호환 가능하게 래핑.
+              </p>
+            </div>
+          </div>
+          <p class="mt-6 text-center text-md text-[#073B4C]">
+            통신 프로토콜:
+            <strong class="text-[#FF6B6B]">JSON-RPC 2.0</strong> (stdio, HTTP,
+            WebSocket 등 다양한 채널 지원)
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+          <div class="card">
+            <h4 class="text-xl font-bold text-[#06D6A0] mb-2">
+              🛠️ 도구 (Tools)
+            </h4>
+            <p>
+              AI가 호출하여 특정 작업을 수행하는 실행 가능한 함수 (예: API 호출,
+              DB 쿼리, 파일 조작).
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="text-xl font-bold text-[#FFD166] mb-2">
+              📦 리소스 (Resources)
+            </h4>
+            <p>
+              AI가 접근/소비할 수 있는 구조화된 데이터 스트림 (예: 파일 내용,
+              시스템 로그, API 응답).
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="text-xl font-bold text-[#118AB2] mb-2">
+              📝 프롬프트 (Prompts)
+            </h4>
+            <p>
+              반복적 워크플로우를 위한 재사용 가능한 명령어 템플릿. 일관되고
+              효과적인 도구 사용 안내.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="my-12">
+        <h2 class="section-title">
+          MCP 도입의 핵심 이점:
+          <span class="gradient-text">AI 능력의 비약적 향상</span>
+        </h2>
+        <p class="section-subtitle">
+          MCP는 AI 모델과 외부 세계를 연결함으로써 개발자와 AI 시스템 모두에게
+          다양한 혁신적인 이점을 제공합니다.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">🔗</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">표준화된 통합</h3>
+            </div>
+            <p>
+              다양한 외부 도구 및 데이터 소스를 일관된 방식으로 연결하여 맞춤형
+              커넥터 개발 부담 감소.
+            </p>
+          </div>
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">🧠</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">향상된 맥락 인식</h3>
+            </div>
+            <p>
+              실시간 외부 데이터 접근을 통해 AI 응답의 정확성과 맥락 이해도 대폭
+              향상.
+            </p>
+          </div>
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">🚀</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">동적 도구 사용</h3>
+            </div>
+            <p>
+              AI가 런타임에 사용 가능한 도구를 동적으로 검색하고 현재 맥락에
+              맞게 실행.
+            </p>
+          </div>
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">🛡️</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">개선된 보안</h3>
+            </div>
+            <p>
+              로컬 우선 원칙 및 명시적 사용자 승인을 통해 개인 정보 보호 강화
+              (지속 발전 중).
+            </p>
+          </div>
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">🌍</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">생태계 성장</h3>
+            </div>
+            <p>
+              표준 프로토콜 기반으로 커넥터 재사용성 증대, 개발자 협업 및 생태계
+              확장 촉진.
+            </p>
+          </div>
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">💡</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">개발 단순화</h3>
+            </div>
+            <p>AI 기반 애플리케이션 개발 복잡성 감소 및 개발 시간 단축.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="adoption-growth" class="my-12">
+        <h2 class="section-title">
+          MCP 시장 동향:
+          <span class="gradient-text">채택 확산과 성장 전망</span>
+        </h2>
+        <p class="section-subtitle">
+          MCP는 AI 개발 패러다임을 변화시키며 빠르게 채택되고 있습니다. 다음은
+          MCP 생태계의 성장과 주요 기능 활용도를 보여주는 (가상) 데이터입니다.
+        </p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card">
+            <h3 class="text-xl font-bold text-center text-[#118AB2] mb-4">
+              MCP 서버 수 증가 추이 (가상)
+            </h3>
+            <div class="chart-container h-[300px] md:h-[350px]">
+              <canvas id="mcpServerGrowthChart"></canvas>
+            </div>
+            <p class="text-center mt-4 text-sm text-[#073B4C]">
+              오픈소스 및 상용 MCP 서버의 수가 증가하며 생태계가 확장되고 있음을
+              나타냅니다.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="text-xl font-bold text-center text-[#118AB2] mb-4">
+              MCP 주요 기능 활용도 (가상)
+            </h3>
+            <div class="chart-container h-[300px] md:h-[350px]">
+              <canvas id="mcpFeatureAdoptionChart"></canvas>
+            </div>
+            <p class="text-center mt-4 text-sm text-[#073B4C]">
+              다양한 MCP 기능 중 특히 로컬 파일 시스템 연동과 외부 API 호출
+              기능이 활발히 사용되고 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="use-cases" class="my-12">
+        <h2 class="section-title">
+          MCP 활용 사례 비교:
+          <span class="gradient-text">Claude Desktop vs CursorAI</span>
+        </h2>
+        <p class="section-subtitle">
+          MCP를 채택한 대표적인 두 애플리케이션, Claude Desktop과 CursorAI는
+          각기 다른 접근 방식으로 MCP를 활용하여 사용자에게 강력한 AI 경험을
+          제공합니다.
+        </p>
+        <div class="overflow-x-auto card">
+          <table class="min-w-full comparison-table">
+            <thead>
+              <tr>
+                <th>기능</th>
+                <th>Claude Desktop</th>
+                <th>CursorAI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-semibold">주요 MCP 초점</td>
+                <td>
+                  로컬 기능 확장 (파일 시스템, 로컬 코드 실행)을 통한 직접적인
+                  사용자 상호작용.
+                </td>
+                <td>
+                  AI 에이전트에게 외부/내부 도구 및 데이터를 제공하여
+                  프로젝트별, 종종 자율적인 작업 수행.
+                </td>
+              </tr>
+              <tr>
+                <td class="font-semibold">구성 방법</td>
+                <td>전역 JSON 파일 편집, UI 개발자 설정. 앱 재시작 필요.</td>
+                <td>
+                  UI 설정, 프로젝트별/전역 JSON 파일. stdio 및 SSE/HTTP 서버
+                  지원.
+                </td>
+              </tr>
+              <tr>
+                <td class="font-semibold">서버 호출 방식</td>
+                <td>주로 명령어 실행(예: `npx`)을 통한 로컬 서버.</td>
+                <td>로컬(stdio) 및 원격(SSE/HTTP) 서버.</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">도구 관리 및 UI</td>
+                <td>
+                  아이콘으로 도구 표시. 기본적으로 세션/도구별 승인 프롬프트.
+                </td>
+                <td>
+                  "사용 가능한 도구" 목록. 에이전트가 도구 선택. 호출 인수 UI
+                  제공.
+                </td>
+              </tr>
+              <tr>
+                <td class="font-semibold">사용자 제어</td>
+                <td>
+                  기본값: 사용별 명시적 수동 승인. (자동 승인은 고급 설정 필요)
+                </td>
+                <td>
+                  에이전트 중심. 승인 없는 실행을 위한 선택적 "자동 실행" 옵션.
+                </td>
+              </tr>
+              <tr>
+                <td class="font-semibold">일반적인 사용 사례</td>
+                <td>로컬 파일 조작, `codemcp`를 통한 페어 프로그래밍.</td>
+                <td>
+                  데이터베이스 연동, 웹 스크래핑, 웹 검색, SaaS 통합 (GitHub,
+                  Stripe 등).
+                </td>
+              </tr>
+              <tr>
+                <td class="font-semibold">인증 처리</td>
+                <td>
+                  명령어 실행 컨텍스트 외 서버 인증에 대한 명시적 설명 부족.
+                </td>
+                <td>서버 인증을 위한 환경 변수 지원.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 mt-8">
+          <div class="card">
+            <h3 class="text-2xl font-bold text-[#118AB2] mb-3">
+              💡 Claude Desktop
+            </h3>
+            <p class="mb-2">
+              <strong>강점:</strong> 로컬 환경과의 강력한 통합, 사용자의
+              직접적인 제어.
+            </p>
+            <p class="mb-2">
+              <strong>특징:</strong> 파일 시스템 접근, `codemcp`를 통한 로컬
+              코드베이스 작업 등 사용자와의 직접적인 상호작용 및 로컬 작업
+              자동화에 중점.
+            </p>
+            <p>
+              <strong>타겟 사용자:</strong> 로컬 개발 환경에서 AI의 지원을
+              받으려는 개발자, 콘텐츠 생성자.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="text-2xl font-bold text-[#06D6A0] mb-3">✨ CursorAI</h3>
+            <p class="mb-2">
+              <strong>강점:</strong> AI 에이전트의 자율성, 다양한 외부 서비스
+              연동, 유연한 구성.
+            </p>
+            <p class="mb-2">
+              <strong>특징:</strong> AI 에이전트가 광범위한 로컬 및 원격
+              도구/데이터 소스와 상호작용하여 자율적인 작업 수행 지원.
+              데이터베이스, 웹 서비스, SaaS 플랫폼 연동.
+            </p>
+            <p>
+              <strong>타겟 사용자:</strong> 개발 워크플로우 전반에 걸쳐 AI
+              에이전트의 능동적인 지원을 원하는 개발자.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="control" class="my-12">
+        <h2 class="section-title">
+          MCP 제어 메커니즘:
+          <span class="gradient-text">프롬프트를 넘어선 다층적 제어</span>
+        </h2>
+        <p class="section-subtitle">
+          MCP를 통한 AI 행동 제어는 단순한 프롬프트 엔지니어링을 넘어, 설계부터
+          활용까지 여러 계층에서 이루어집니다. 이는 MCP 시스템의 안정성과 예측
+          가능성을 보장합니다.
+        </p>
+        <div class="card">
+          <h3 class="text-2xl font-bold text-[#118AB2] mb-4 text-center">
+            MCP 제어의 다층적 구조
+          </h3>
+          <div class="space-y-2">
+            <div class="flow-step">
+              <h4 class="font-semibold text-lg text-[#073B4C]">
+                1. 서버 정의 (Server Definition)
+              </h4>
+              <p class="text-sm">
+                개발자가 MCP 서버의 도구, 기능, 입출력 등을 정의. AI 능력의
+                근본적 토대.
+              </p>
+            </div>
+            <div class="flow-arrow">▼</div>
+            <div class="flow-step">
+              <h4 class="font-semibold text-lg text-[#073B4C]">
+                2. 클라이언트 구성 (Client Configuration)
+              </h4>
+              <p class="text-sm">
+                사용자/관리자가 AI 환경에 연결할 MCP 서버를 선택 및 활성화. 접근
+                가능한 도구 범위 제어.
+              </p>
+            </div>
+            <div class="flow-arrow">▼</div>
+            <div class="flow-step">
+              <h4 class="font-semibold text-lg text-[#073B4C]">
+                3. 호스트 애플리케이션 정책 (Host Application Policies)
+              </h4>
+              <p class="text-sm">
+                Claude Desktop, CursorAI 등 호스트 앱이 자체 권한 부여 정책 및
+                사용자 동의 절차 시행.
+              </p>
+            </div>
+            <div class="flow-arrow">▼</div>
+            <div class="flow-step">
+              <h4 class="font-semibold text-lg text-[#073B4C]">
+                4. 프롬프트 전략 (Prompting Strategy)
+              </h4>
+              <p class="text-sm">
+                사용자가 프롬프트를 통해 AI가 사용 가능한 MCP 도구를 *어떻게*
+                활용할지 안내 및 지시.
+              </p>
+            </div>
+            <div class="flow-arrow">▼</div>
+            <div class="flow-step">
+              <h4 class="font-semibold text-lg text-[#073B4C]">
+                5. 기본 프로토콜 (Underlying Protocol - JSON-RPC)
+              </h4>
+              <p class="text-sm">
+                모든 상호작용을 구조화되고 검증 가능한 명령어 형태로 보장.
+                모호성 감소 및 예측 가능한 작동.
+              </p>
+            </div>
+          </div>
+          <p class="mt-6 text-center text-md text-[#073B4C]">
+            결론: MCP 제어는 프롬프트에만 국한되지 않으며, 시스템 전반에 걸친
+            <strong class="text-[#FF6B6B]">포괄적인 제어 메커니즘</strong>이
+            존재합니다.
+          </p>
+        </div>
+      </section>
+
+      <section id="future" class="my-12">
+        <h2 class="section-title">
+          MCP의 미래:
+          <span class="gradient-text">진화하는 AI 에이전트 통합 환경</span>
+        </h2>
+        <p class="section-subtitle">
+          MCP 생태계는 지속적으로 성장하며 AI 에이전트 기술 발전에 핵심적인
+          역할을 할 것입니다. 향후 MCP는 더욱 지능적이고 안전하며 사용자
+          친화적인 방향으로 발전할 것으로 예상됩니다.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">🔒</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">
+                향상된 보안 및 거버넌스
+              </h3>
+            </div>
+            <p>
+              대규모 기업 환경을 위한 정교한 인증, 인가, 접근 제어 및 감사 추적
+              기능 통합.
+            </p>
+          </div>
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">🖱️</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">
+                사용자 친화적 구성
+              </h3>
+            </div>
+            <p>
+              직관적인 인터페이스와 도구를 통해 MCP 서버 구성 및 관리 편의성
+              증대.
+            </p>
+          </div>
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">🤖</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">
+                AI 에이전트 지능 고도화
+              </h3>
+            </div>
+            <p>
+              최적 도구 동적 발견, 복잡한 작업 수행을 위한 도구 조합(tool
+              chaining) 능력 향상.
+            </p>
+          </div>
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">🔄</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">
+                복잡한 상호작용 표준화
+              </h3>
+            </div>
+            <p>
+              다단계 대화형 작업, 비동기 처리 등 복잡한 상호작용 패턴에 대한
+              표준화 논의.
+            </p>
+          </div>
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">📈</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">
+                지속적인 생태계 성장
+              </h3>
+            </div>
+            <p>
+              더 많은 오픈소스 및 상용 MCP 서버 등장으로 활용 범위 확대 및 개발
+              환경 편의성 증진.
+            </p>
+          </div>
+          <div class="card">
+            <div class="flex items-center mb-2">
+              <span class="benefit-icon">🧩</span>
+              <h3 class="text-xl font-bold text-[#073B4C]">
+                고도화된 에이전트 지원
+              </h3>
+            </div>
+            <p>
+              강력한 오류 처리, 상태 관리, 워크플로우 조율 능력 등 지능형
+              에이전트 행동 지원 강화.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="conclusion" class="my-12 py-12 bg-[#073B4C] text-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl font-bold mb-4 text-[#FFD166]">
+            결론: MCP, AI 혁신의 핵심 동력
+          </h2>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto mb-6">
+            모델 컨텍스트 프로토콜(MCP)은 AI가 고립된 정보의 섬에서 벗어나 실제
+            세계의 방대한 데이터 및 기능과 연결될 수 있도록 하는 핵심 기술로
+            자리매김했습니다. Claude Desktop, CursorAI와 같은 애플리케이션에서의
+            성공적인 적용 사례는 MCP의 실질적인 유용성을 입증하며, AI 시스템
+            통합의 복잡성을 낮추고 AI의 능력을 한층 끌어올리고 있습니다.
+          </p>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto">
+            단순한 프롬프트 제어를 넘어선 다층적 제어 메커니즘과 지속적인 생태계
+            성장을 바탕으로, MCP는 앞으로 더욱 지능적이고 안전하며 강력한 AI
+            애플리케이션 개발을 이끌어갈 중요한 동력이 될 것입니다. "AI를 위한
+            USB-C 포트"라는 비전은 점차 현실이 되고 있습니다.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-8 bg-gray-100 text-sm text-gray-600">
+      <p>
+        &copy; 2025 MCP 산업 동향 분석. 본 인포그래픽은 제공된 자료를 바탕으로
+        제작되었습니다.
+      </p>
+      <p>차트 데이터는 이해를 돕기 위한 가상 수치일 수 있습니다.</p>
+    </footer>
+
+    <script>
+      const CHART_COLORS = {
+        redPink: '#FF6B6B',
+        yellow: '#FFD166',
+        green: '#06D6A0',
+        blue: '#118AB2',
+        darkBlue: '#073B4C',
+        lightGray: '#E5E7EB',
+      };
+
+      function wrapLabel(str, maxWidth) {
+        if (str.length <= maxWidth) {
+          return str;
+        }
+        const words = str.split(' ');
+        let currentLine = '';
+        const lines = [];
+        for (const word of words) {
+          if ((currentLine + word).length <= maxWidth) {
+            currentLine += (currentLine ? ' ' : '') + word;
+          } else {
+            if (currentLine) lines.push(currentLine);
+            currentLine = word;
+          }
+        }
+        if (currentLine) lines.push(currentLine);
+        return lines.length > 0 ? lines : [str]; // Ensure it returns array even if one line after processing
+      }
+
+      const tooltipTitleCallback = (tooltipItems) => {
+        const item = tooltipItems[0];
+        let label = item.chart.data.labels[item.dataIndex];
+        if (Array.isArray(label)) {
+          return label.join(' ');
+        }
+        return label;
+      };
+
+      // MCP Server Growth Chart (Line Chart - Illustrative)
+      const mcpServerGrowthCtx = document.getElementById(
+        'mcpServerGrowthChart',
+      );
+      if (mcpServerGrowthCtx) {
+        new Chart(mcpServerGrowthCtx, {
+          type: 'line',
+          data: {
+            labels: ['2022년', '2023년', '2024년', '2025년 (전망)'],
+            datasets: [
+              {
+                label: 'MCP 서버 수 (가상)',
+                data: [20, 80, 250, 500],
+                borderColor: CHART_COLORS.green,
+                backgroundColor: CHART_COLORS.green + '33', // opacity
+                fill: true,
+                tension: 0.1,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: { display: true, text: '서버 수' },
+              },
+            },
+            plugins: {
+              legend: { display: true, position: 'top' },
+              tooltip: { callbacks: { title: tooltipTitleCallback } },
+            },
+          },
+        });
+      }
+
+      // MCP Feature Adoption Chart (Donut Chart - Illustrative)
+      const mcpFeatureAdoptionCtx = document.getElementById(
+        'mcpFeatureAdoptionChart',
+      );
+      if (mcpFeatureAdoptionCtx) {
+        const rawLabels = [
+          '로컬 파일 시스템 연동',
+          '외부 API 호출',
+          '데이터베이스 연결',
+          '사용자 정의 도구',
+          '기타 MCP 기능',
+        ];
+        const processedLabels = rawLabels.map((label) => wrapLabel(label, 16));
+
+        new Chart(mcpFeatureAdoptionCtx, {
+          type: 'doughnut',
+          data: {
+            labels: processedLabels,
+            datasets: [
+              {
+                label: 'MCP 기능 활용도 (%)',
+                data: [35, 30, 15, 10, 10],
+                backgroundColor: [
+                  CHART_COLORS.blue,
+                  CHART_COLORS.green,
+                  CHART_COLORS.yellow,
+                  CHART_COLORS.redPink,
+                  CHART_COLORS.lightGray,
+                ],
+                hoverOffset: 4,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: true, position: 'bottom' },
+              tooltip: { callbacks: { title: tooltipTitleCallback } },
+            },
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
